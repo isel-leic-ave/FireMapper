@@ -1,0 +1,9 @@
+44876;Pedro Henrique Muzachio Castanheira;TLI41D
+44880;Ricardo Miguel Gonçalves Tomé;TLI41N
+44885;Miguel Ângelo Gomes Claro;TLI42D
+44999;Bartiskovley Navriska Bratsha Sverilev;TLI42D
+45094;Pedro Miguel Fernandes Correia;TLI42D
+45371;Gonçalo André Louro Cesário Costa;TLI42D
+55999;Gama Danda Canda Lanta;TLI41D
+47722;David Pereira Lourenço;TLI42D
+48084;Pedro Daniel Diz Pinela;TLI41N
