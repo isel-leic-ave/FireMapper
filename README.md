@@ -1,6 +1,10 @@
-To Run tests you must place your Firebase key json file in folder `FireSource.Test\Resources`.
+**To Run tests you must place your Firebase key json file in folder `FireSource.Test\Resources`.**
 
 First create your Firestore database following the guide [isel-AVE-2021-FireStore-get-started.md](isel-AVE-2021-FireStore-get-started)
+
+High level view of projects and core types:
+
+<img src="FireMapper.svg">
 
 Run tests with `dotnet test --logger "console;verbosity=detailed"` to see `Console` output.
 

@@ -1,0 +1,11 @@
+[<<FireSource>>;IDataSource]^[<<FireSource>>;FireDataSource]
+[<<FireSource>>;IDataSource]^[<<FireSource>>;WeakDataSource]
+[<<FireMapper>>;IDataMapper]^[<<FireMapper>>;FireDataMapper]
+[FireDataMapper]-source>[IDataSource]
+[FireDataSource]-db>[FirestoreDb]
+
+[<<FireMapper>>;IDataMapper|getAll():IEnumerable;GetById(object keyValue):object;Add(object obj);Update(object obj);Delete(object keyValue);]
+
+[<<Google.Cloud.Firestore>>;FirestoreDb|AddAsync();DeleteAsync();GetSnapshotAsync();WhereEqualTo();UpdateAsync()]
+
+[<<FireSource>>;IDataSource|GetAll():IEnumerable;GetById(object KeyValue):Dictionary;Add(Dictionary obj):DocumentReference;Update(Dictionary obj):WriteResult;Delete(object KeyValue);]
