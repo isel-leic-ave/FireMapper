@@ -60,7 +60,7 @@ namespace FireSource.Test
             studentsDb.Add(new Dictionary<string, object>(){
                 {"Number", st.Number},
                 {"Name", st.Name},
-                {"Classroom", fix.classroomsIds[st.Classroom]},
+                {"Classroom", st.Classroom},
             });
             /// 
             /// Get newby Student
@@ -68,7 +68,7 @@ namespace FireSource.Test
             var actual = studentsDb.GetById(st.Number);
             Assert.Equal(st.Name, actual["Name"]);
             Assert.Equal(st.Number, actual["Number"]);
-            Assert.Equal(fix.classroomsIds[st.Classroom], actual["Classroom"]);
+            Assert.Equal(st.Classroom, actual["Classroom"]);
             /// 
             /// Remove Student
             /// 

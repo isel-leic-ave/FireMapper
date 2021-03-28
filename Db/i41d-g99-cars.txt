@@ -1,0 +1,23 @@
+Cars: 
+* Model: String
+* Brand (Name on Brands)
+* MaxTorque: Number
+* Transmission: String
+
+Brands: 
+* Name: String
+* Country: String
+
+
+Example:
+{
+  Model: i3,
+  Brand: BMW,
+  MaxTorque: 250,
+  Transmission: Automatic
+}
+
+{
+  Name: BMW,
+  Country: Germany
+}
