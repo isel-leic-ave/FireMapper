@@ -4,6 +4,13 @@
 
 ***
 
+Assignments:
+1. Published 28-3-2021, DEADLINE: 18-4-2021, [FireMapper-1-reflection](Assignments/FireMapper-1-reflection.md)
+2. TBD
+3. TBD
+
+***
+
 High level view of projects (in `<<...>>`) and core types:
 
 <img src="FireMapper.svg">

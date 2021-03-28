@@ -5,9 +5,10 @@ que armazena **colecções** de **documentos** JSON.
 
 https://github.com/isel-leic-ave/FireMapper
 
-Uma base de dados FireStore é gerida a partir de um projecto FireBase. De modo a
-se familiarizar com a tecnologia deve em primeiro lugar seguir os passos do
-guião “[_FireStore get started_](https://github.com/isel-leic-ave/FireMapper/blob/master/isel-AVE-2021-FireStore-get-started.md)”
+Uma base de dados FireStore é gerida a partir de um projecto FireBase. 
+**De modo a se familiarizar com a tecnologia deve em primeiro lugar seguir os
+passos do guião 
+“[_FireStore get started_](https://github.com/isel-leic-ave/FireMapper/blob/master/isel-AVE-2021-FireStore-get-started.md)”**
 para criar alguns documentos e uma pequena aplicação em C# que se liga a essa
 base de dados listando o seu conteúdo na consola.
 
@@ -32,7 +33,7 @@ informação complementar dada na forma de anotações, por via dos seguintes
 _custom attributes_:
 * `FireCollection` - aplicado a uma classe para identificar o nome da coleção Firestore.
 * `FireKey` - identifica a propriedade que é chave única na pesquisa de um documento através do método `GetById`
-* `FireIgnore` - propriedade a ignorada no mapeamento com um documento.
+* `FireIgnore` - propriedade a ignorar no mapeamento com um documento.
 
 Exemplo:
 
@@ -94,7 +95,7 @@ de domínio, e.g. instâncias de `Student`.
    a classe `FireDataMapper` pode funcionar com qualquer implementação de
    `IDataSource` especificada por parâmetro do construtor.
 
-3. Defina um modelo de domínio e crie uma amostra numa nova base de dados para
+3. Defina as classes de um modelo de domínio e crie uma nova base de dados para
    esse modelo no FireStore e teste com a sua biblioteca FireMapper. Exemplos:
    carros, filmes, música, desportos, jogadores de futebol, ligas de futebol,
    jogadores da NBA, videogames, surfistas, lutadores, séries de TV, surf spots,
@@ -108,6 +109,7 @@ de domínio, e.g. instâncias de `Student`.
      `Student` corresponde à propriedade _Token_ de um documento `Classroom`
      semelhante ao comportamento de uma _foreign key_.
    * Cada grupo de trabalho deverá usar um modelo de domínio distinto.
+   * **Modelos de domínio mais ricos em termos de dados e relações entre si, serão valorizados.**
 
 Faça um _pull request_ para o repositório
 https://github.com/isel-leic-ave/FireMapper/ para adicionar um novo ficheiro na
