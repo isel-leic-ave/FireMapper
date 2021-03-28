@@ -1,3 +1,5 @@
+**DATA LIMITE de entrega**: 18 de Abril de 2021. Fazer _push_ a tag `trab1` no repositório do grupo.
+
 Neste trabalho pretende-se desenvolver a biblioteca _FireMapper_ que
 disponibiliza uma abstração sobre uma **colecção** de uma base de dados
 documental FireStore. Em modo resumido, o FireStore é uma base de dados NoSQL
