@@ -1,6 +1,6 @@
 **To Run tests you must place your Firebase key json file in folder `FireSource.Test\Resources`.**
 
-**FIRST create your Firestore database following the guide [isel-AVE-2021-FireStore-get-started.md](isel-AVE-2021-FireStore-get-started)**
+**FIRST create your Firestore database following the guide [isel-AVE-2021-FireStore-get-started.md](isel-AVE-2021-FireStore-get-started.md)**
 
 ***
 
