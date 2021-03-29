@@ -88,8 +88,12 @@ de domínio, e.g. instâncias de `Student`.
 
 1. Usando a API de Reflexão implemente a classe `FireDataMapper` que faz o
    mapeamento entre objectos de domínio e dados na forma de `Dictionary<string,
-   object>` manipulados por uma instância de `IDataSource`. Implemente os testes
-   unitários que validem o correcto funcionamento dos métodos.
+   object>` manipulados por uma instância de `IDataSource`.
+   Implemente os testes unitários que validem o correcto funcionamento dos métodos,
+   incluíndo casos de excepção como por exemplo, ausência de anotações; mais que uma
+   propriedade anotada com `FireKey`; etc.
+   Garanta o máximo de cobertura observando o _coverage report_ obtido através do 
+   procedimento desrito no README.md.
 
 2. Faça uma implementação alternativa de `IDataSource` na classe
    `WeakDataSource` que mantém os dados apenas em memória (defina a estrutura de
@@ -98,7 +102,7 @@ de domínio, e.g. instâncias de `Student`.
    `IDataSource` especificada por parâmetro do construtor.
 
 3. Defina as classes de um modelo de domínio e crie uma nova base de dados para
-   esse modelo no FireStore e teste com a sua biblioteca FireMapper. Exemplos:
+   esse modelo no FireStore e teste com a sua biblioteca _FireMapper_. Exemplos:
    carros, filmes, música, desportos, jogadores de futebol, ligas de futebol,
    jogadores da NBA, videogames, surfistas, lutadores, séries de TV, surf spots,
    praias, cidades do mundo, resorts de neve, hotéis, marcas, etc.
@@ -108,7 +112,7 @@ de domínio, e.g. instâncias de `Student`.
    * Use _auto id_ nos documentos da base de dados.
    * Veja o exemplo de associação criado nos testes do projecto
      _FireSource.Tests_ e como a propriedade `Classroom` de um documento
-     `Student` corresponde à propriedade _Token_ de um documento `Classroom`
+     `Student` corresponde à propriedade `Token` de um documento `Classroom`
      semelhante ao comportamento de uma _foreign key_.
    * Cada grupo de trabalho deverá usar um modelo de domínio distinto.
    * **Modelos de domínio mais ricos em termos de dados e relações entre si, serão valorizados.**
