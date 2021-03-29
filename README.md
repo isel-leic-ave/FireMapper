@@ -1,8 +1,9 @@
 **To Run tests you must:**
 1. place your Firebase key json file in folder `FireSource.Test\Resources`.
 1. update the path in `<Content Include="Resources\dummydemo-11dd3-firebase-adminsdk-vp6c5-28b7f0fa93.json">` of `FireSource.Test.csproj`
-1. update the path in `FireStoreFixture.cs` of `FireSource.Test` project.
-
+1. update the `FireStoreFixture.cs` of `FireSource.Test` project with:
+   * correct path to Firebase key json file in constant `FIREBASE_CREDENTIALS_PATH`
+   * project id in constant `FIREBASE_PROJECT_ID`
 
 **FIRST create your Firestore database following the guide [isel-AVE-2021-FireStore-get-started.md](isel-AVE-2021-FireStore-get-started.md)**
 

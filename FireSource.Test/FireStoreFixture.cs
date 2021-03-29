@@ -13,18 +13,20 @@ namespace FireSource.Test
     public class FireStoreFixture : IDisposable
     {
         const string FIREBASE_PROJECT_ID = "dummydemo-11dd3";
-
+        const string FIREBASE_CREDENTIALS_PATH = "Resources/dummydemo-11dd3-firebase-adminsdk-vp6c5-28b7f0fa93.json";
+        const string SOURCE_ITEMS="Resources/isel-AVE-2021.txt";
+        
         public readonly FireDataSource studentsDb = new FireDataSource(
                 FIREBASE_PROJECT_ID,
                 "Students", // Collection
                 "Number",   // key field
-                "Resources\\dummydemo-11dd3-firebase-adminsdk-vp6c5-28b7f0fa93.json"
+                FIREBASE_CREDENTIALS_PATH
             );
         public readonly FireDataSource classroomsDb = new FireDataSource(
                 FIREBASE_PROJECT_ID,
                 "Classrooms", // Collection
                 "Token",   // key field
-                "Resources\\dummydemo-11dd3-firebase-adminsdk-vp6c5-28b7f0fa93.json"
+                FIREBASE_CREDENTIALS_PATH
             );
 
         public void Dispose()
@@ -46,7 +48,7 @@ namespace FireSource.Test
         public FireStoreFixture()
         {
             CreateClassrooms();
-            AddToFirestoreFrom("Resources\\isel-AVE-2021.txt");
+            AddToFirestoreFrom(SOURCE_ITEMS);
         }
         void CreateClassrooms()
         {
