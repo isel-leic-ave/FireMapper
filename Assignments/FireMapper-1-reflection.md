@@ -86,22 +86,25 @@ Enquanto a classe `FireDataSource` lida com dados fracamente tipificados na
 forma de `Dictionary<string, object>`, a classe `FireDataMapper` trata objectos
 de domínio, e.g. instâncias de `Student`.
 
+
+1. Implemente os _custom attributes_ `FireCollection`, `FireKey` e `FireIgnore`.
+
 1. Usando a API de Reflexão implemente a classe `FireDataMapper` que faz o
-   mapeamento entre objectos de domínio e dados na forma de `Dictionary<string,
-   object>` manipulados por uma instância de `IDataSource`.
+   mapeamento entre objectos de domínio e dados na forma de 
+   `Dictionary<string, object>` manipulados por uma instância de `IDataSource`.
    Implemente os testes unitários que validem o correcto funcionamento dos métodos,
    incluíndo casos de excepção como por exemplo, ausência de anotações; mais que uma
    propriedade anotada com `FireKey`; etc.
    Garanta o máximo de cobertura observando o _coverage report_ obtido através do 
-   procedimento desrito no README.md.
+   procedimento descrito no README.md.
 
-2. Faça uma implementação alternativa de `IDataSource` na classe
+1. Faça uma implementação alternativa de `IDataSource` na classe
    `WeakDataSource` que mantém os dados apenas em memória (defina a estrutura de
    dados ao seu critério). Valide o funcionamento com testes unitários. Note que
    a classe `FireDataMapper` pode funcionar com qualquer implementação de
    `IDataSource` especificada por parâmetro do construtor.
 
-3. Defina as classes de um modelo de domínio e crie uma nova base de dados para
+1. Defina as classes de um modelo de domínio e crie uma nova base de dados para
    esse modelo no FireStore e teste com a sua biblioteca _FireMapper_. Exemplos:
    carros, filmes, música, desportos, jogadores de futebol, ligas de futebol,
    jogadores da NBA, videogames, surfistas, lutadores, séries de TV, surf spots,
@@ -130,7 +133,7 @@ Cada _pull request_ deve atender aos seguintes requisitos:
   (_foreign key_) entre elas.
 * Um exemplo dos documentos.
 
-4. `DataFireMapper` deve suportar classes de domínio com propriedades de tipo
+5. `DataFireMapper` deve suportar classes de domínio com propriedades de tipo
    definido por outras classes de domínio. Neste caso deve criar uma outra
    instância de `DataFireMapper` auxiliar para o respectivo tipo da propriedade
    que permite aceder à respectiva colecção. Valide o funcionamento da
