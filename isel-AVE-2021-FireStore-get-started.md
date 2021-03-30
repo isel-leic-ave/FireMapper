@@ -120,7 +120,7 @@ documents.
 
 ![drawing](images/image12.png)
 
-33. Write the following Program.cs
+33. Write the following `Program.cs`. **NOTICE that you should use your project ID on line 9 where you find `FirestoreDb.Create("USE here YOUR Project ID");`** (e.g. `fire-students`). On step 19 of this guide you may find your Project ID.
 
 ![drawing](images/image9.png)
 
