@@ -1,0 +1,44 @@
+NBA_PLAYER: 
+* Name: String
+* Height: Number
+* Team(FK Team.name): String
+* Age: Number
+* Nationality: String
+* Draft_Year : Number
+
+Team: 
+* Name: String
+* State: String
+* Owner: String
+* Head_Coach : String
+* Stadium(FK Stadium.Name) : String
+
+Stadium:
+* Name: String
+* Capacity: Number
+* Build_Year: Number
+
+
+Example:
+{
+Name: Stephen Curry
+Height: 1.91
+Team(FK Team.name): Golden State Warriors
+Age: 33
+Nationality: American
+Draft_Year : 2009
+}
+
+{
+Name: Golden State Warriors
+State: California
+Owner: Joseph S. Lacob
+Head_Coach : Steve Kerr
+Stadium : Chase Center
+}
+
+{
+Name: Chase Center
+Capacity: 18000
+Build_Year: 2017
+}
