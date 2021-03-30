@@ -1,0 +1,54 @@
+City:
+* name:
+* coordinates:
+* country:
+* population:
+* area:
+* time_zone:
+* description:
+
+Points_Of_Interest:
+* name:
+* city (FK City.name)
+* type:
+* evaluation:
+* description:
+
+VIPs:
+* name:
+* city (FK City.name):
+* job:
+* birthday:
+* description:
+
+
+Example:
+
+{
+name: Lisboa
+coordinates: 38.721794297497006, -9.13926090294197
+country: Portugal
+population: 506892
+area: 100,05 km²
+time_zone: GMT +0
+description: "A capital portuguesa possui pontos turísticos históricos e culturais.
+A Torre de Belém, o Castelo de São Jorge, o Convento do Carmo e o Monumento aos Descobrimentos são apenas alguns lugares que precisam estar no seu roteiro."
+}
+
+{
+name: Castelo de São Jorge
+city: Lisboa
+type: Monument
+evaluation: 4
+description: "O Castelo de São Jorge, antigo Paço de Alcáçova, localiza-se na freguesia de Santa Maria Maior (Castelo), na cidade e concelho de Lisboa, em Portugal. 
+As primeiras fortalezas do castelo datam do século I a.C. tendo ele sido reconstruído diversas vezes por vários povos e recebido diferentes nomes."
+}
+
+{
+name: Fernando Medina
+city: Lisboa
+job: Presidente da Câmara
+birthday: 10/03/1973
+description: "Fernando de Medina Maciel Almeida Correia (Porto, 10 de março de 1973) é um economista e político português.
+Sucedeu a António Costa como Presidente da Câmara Municipal de Lisboa a 6 de abril de 2015."
+}
