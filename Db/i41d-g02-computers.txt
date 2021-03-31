@@ -1,0 +1,22 @@
+ Computers:
+* CPU: String
+* GPU: String
+* IsLaptop: Boolean
+* Price: Number
+
+Brands:
+* Name: String
+* Country: String
+
+Example:
+{	
+	CPU: Intel i7 2.3Ghz
+	GPU: Nvidia 1080ti
+	IsLaptop: true
+	Price: 799.99
+}
+
+{
+	Name: ASUS
+	Country: USA
+}

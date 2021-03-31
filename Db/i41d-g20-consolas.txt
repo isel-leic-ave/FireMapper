@@ -1,0 +1,29 @@
+Consolas: 
+* Company: String
+* Model: String
+* defaultColor: boolean
+* Weight: Number
+* Portable: boolean
+* PurchaseLocation ( PostalCode on Location )
+
+Location: 
+* PostalCode: String
+* Coord_X: Number
+* Coord_Y: Number
+
+
+Example:
+{
+  Company: Nintendo
+  Model: Switch Lite
+  defaultColor: true
+  Weight: 399.1613
+  Portable: true
+  PurchaseLocation: 2810-354
+}
+
+{
+  PostalCode: 2810-354
+  Coord_X:38.66156821354242  
+  Coord_Y:-9.176660500000002
+}
