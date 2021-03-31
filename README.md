@@ -18,7 +18,13 @@ Assignments:
 
 High level view of projects (in `<<...>>`) and core types:
 
-<img src="FireMapper.svg">
+<img src="Assets/FireMapper.svg">
+
+***
+
+<a target="_blank" href="Assets/FireMapper.pdf">
+    <img width="500" src="Assets/FireMapper.gif">
+</a>
 
 ***
 
