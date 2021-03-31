@@ -1,0 +1,41 @@
+Music:
+* Genre : String
+* Album Name(FK Album.Name) : String
+
+Album :
+* Name (FK) : String
+* Band Name(FK Band.Name) : String
+* Length(in seconds) : int
+* Num of songs : int
+* Year of release : int
+* Record Label Name : String
+
+Band :
+* Name (FK) : String
+* Country : String
+* Career starting year : int
+* Number of members : short
+* Still Active : boolean
+
+EXAMPLE--------------------
+Music{
+	Genre : Metal
+	Album Name : Hands Of Fate
+}
+
+Album {
+	Name : Hands Of Fate
+	Band Name : Savage Messiah
+	Length (in minutes) : 45
+	Num of songs : 10
+	Year of release : 2017
+	Record Label Name : Century Media Records Ltd.
+}
+
+Band {
+	Name : Savage Messiah
+	Country : United Kingdom
+	Career starting year : 2007
+	Number of members : 5
+	Still Active : True
+}
