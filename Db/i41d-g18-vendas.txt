@@ -1,0 +1,50 @@
+CLIENT: 
+* CCID: Number
+* NoTel: Number
+* Name: String
+
+PRODUCT:
+* ID: Number
+* Name: String
+* Category: String
+* Price: Number
+* Brand: String (FK: BRAND.Name)
+
+BRAND:
+* Name: String
+* Country: String
+* Website: String
+
+PURCHASE:
+* Client: Number (FK: CLIENT.NoTel)
+* DtPurchaseUnix: Timestamp
+* Quantity: Number
+* Product: String (FK: PRODUCT.ID)
+
+Example:
+{
+  CCID: 16548262,
+  NoTel: 916378243,
+  Name: Joaquim Maria
+}
+
+{
+  ID: 000006617283
+  Name: Keyboard,
+  Category: Gaming Acessories,
+  Price: 120.99,
+  Brand: Razer
+}
+
+{
+  Name: Razer,
+  Country: USA,
+  Website: www.razer.com,
+}
+
+{
+  Client: 916378243,
+  DtPurchase: 1617218956,
+  Quantity: 1,
+  Product: 000006617283
+}
