@@ -1,0 +1,56 @@
+TV_SERIE:
+*Id: Number
+*Name: String
+*Seasons: Number
+*Genre: Array
+*Year: Number
+*OnGoing: Boolean
+
+PRODUCER:
+*Id: Number
+*Name: String
+*Number_of_Series: Number
+*Country: String
+
+SEASON:
+*Id: Number
+*Number: Number
+*Number_of_Episodes: Num
+*Series_Name(FK TV_SERIE.Id): String
+
+EPISODE:
+*Id: Number
+*Number: Number
+*Title: String
+*Season_Number(FK SEASON.Id): Number
+
+Example:
+{
+Id: 1
+Name: Game of Thrones
+Seasons: 8
+Genre: Fiction, Politics
+Year: 2015
+OnGoing: False
+}
+
+{
+Id: 2
+Name: HBO
+Number_of_Series: 80
+Country: EUA
+}
+
+{
+Id: 3
+Number: 1
+Number_of_Episodes: 10
+Series_Name: Game of Thrones
+}
+
+{
+Id: 4
+Number: 1
+Title: Winter is Coming
+Season_Number: 1
+}
