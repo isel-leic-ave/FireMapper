@@ -1,0 +1,52 @@
+Restaurant:
+* Name: String
+* Contact: Number
+* Address: String
+
+Food_Type:
+* Name: Array
+* Restaurant: String
+
+Chefs:
+* Name: String
+* Speciality: String
+* Food_Type: Array
+
+Capacity:
+* Sits: Number
+* Children_sits: Boolean
+
+Michelin_Stars:
+* Stars: Number
+* Chef: String
+
+
+
+Example:
+
+{
+Name: Barca Do Inferno
+Contact: 218763621
+Address: Rua da barca 2
+}
+
+{
+Name: [Indian, Portuguese]
+Restaurant: Barca Do Inferno
+}
+
+{
+Name: Eduardo Barroso
+Speciality: Francesinha
+Food_Type: [Indian, Portuguese]
+}
+
+{
+Sits: 40
+Children_sits: No
+}
+
+{
+Stars: 4
+Chef: Eduardo Barroso
+}
