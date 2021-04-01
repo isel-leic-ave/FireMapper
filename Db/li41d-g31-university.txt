@@ -1,0 +1,48 @@
+University:
+* Name: String
+* Year: Number
+* Address: String
+
+Department:
+* Name: String
+* Number of courses: Number
+
+Course
+* Name: String
+* Department: String
+* Coordinator: String
+
+Classes
+* Course: String
+* Name: String
+* Acronym: String
+* Optional: Boolean
+* ECTS: Number
+
+
+Example:
+
+{
+Name: ISEL
+Year: 1852
+Address: R. Conselheiro Emídio Navarro 1, 1959-007 Lisboa
+}
+
+{
+Name: ADEETC
+Number of courses: 4
+}
+
+{
+Name: LEIC
+Department: ADEETC
+Coordinator: Artur Ferreira
+}
+
+{
+Course: LEIC
+Name: Ambientes Virtuais de Execução
+Acronym: AVE
+Optional: FALSE
+ECTS: 6
+}
