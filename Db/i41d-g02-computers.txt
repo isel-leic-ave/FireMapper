@@ -7,21 +7,20 @@ Computers:
 * Price: Number
 
 Brands:
-
 * Name: String
 * Country: String
 
 Example:
 {
-ID: 10
-Brand: ASUS
-Model: K55V
-CPU: Intel i7 2.3Ghz
-GPU: Nvidia 1080ti
-Price: 799.99
+ ID: 10
+ Brand: ASUS
+ Model: K55V
+ CPU: Intel i7 2.3Ghz
+ GPU: Nvidia 1080ti
+ Price: 799.99
 }
 
 {
-Name: ASUS
-Country: USA
+ Name: ASUS
+ Country: USA
 }
