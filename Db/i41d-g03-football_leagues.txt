@@ -1,0 +1,47 @@
+Football_League:
+* id:
+* name:
+* country:
+
+
+Team:
+* id:
+* name:
+* league (FK Football_League.id):
+* foundation_year:
+* ranking:
+
+
+Player:
+* id:
+* team_id (FK Team.id):
+* name:
+* age:
+* position:
+* nationality:
+
+
+Example:
+
+{
+id: 1
+name: Liga Portuguesa
+country: Portugal
+}
+
+{
+id: 3
+name: SC Braga
+league (FK Football_League.id): 1
+foundation_year: 1921
+ranking: 4
+}
+
+{
+id: 5
+team_id (FK Team.id): 3
+name: Nicolás Gaitán
+age: 33
+position: MCO
+nationality: Argentina
+}
