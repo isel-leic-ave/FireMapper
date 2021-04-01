@@ -1,0 +1,57 @@
+DRIVER:
+*Driver_Id: Number
+*Name: String
+*Country: String
+*Team: (Team_Id on TEAM)
+*Position: String
+*Poles: Number
+
+GRAND_PRIX:
+*Gp_Id: Number
+*Location: String
+*Winner: (Driver_Id on DRIVER)
+
+TEAM:
+*Team_Id: Number
+*Name: String
+*Base: String
+*CEO: String
+*First_Team_Entry: Number
+
+CAR:
+*Car_Id: Number
+*Team: (Team_Id on TEAM)
+*Driver: (Driver_Id on TEAM)
+*Engine_Id: String
+
+
+Example:
+{
+Driver_Id: 1234
+Name: Lewis Hamilton
+Country: United Kingdom
+Team: Mercedes-AMG Petronas Formula One Team
+Position: 1st
+Poles: 0
+}
+
+{
+Gp_Id: 2246
+Location: Portimão, Portugal
+Winner: Lewis Hamilton
+}
+
+{
+Team_Id: 3210
+Name: Mercedes-AMG Petronas Formula One Team
+Base: Brackley, UK
+CEO: Toto Wolff
+Firt_Team_Entry: 1970
+}
+
+{
+Car_Id: 4444
+Team: 3210
+Driver: 1234
+Engine: W12E
+}
