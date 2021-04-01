@@ -1,0 +1,26 @@
+Cellphone:
+	id:
+	name:
+	model:
+	processor:
+	brand_id(FK Brand.id):
+	
+Brand:
+	id:
+	name:
+	location:
+	
+----Example-----
+{
+id: 87231
+name: Xiaomi A2 Lite
+model: A2 Lite
+processor: Qualcomm Snapdragon 625
+brand_id: 2342
+}
+
+{
+id: 2342
+name: Xiaomi
+location: Pequim
+}
