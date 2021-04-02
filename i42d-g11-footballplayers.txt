@@ -1,0 +1,35 @@
+FootballPlayer:
+		Name: String
+		Age: Number
+		Height: Number
+		Position: String
+		Team: String [FK FootballTeam.name]
+		TshirtN: Number
+		Nationality: String
+		Country: String
+		City: String
+
+FootballTeam:
+		Name: String
+		Country: String
+		City: String
+		Stadium: String
+
+Exemplo:
+{
+	Name: Cristiano Ronaldo dos Santos Aveiro
+	Age: 36
+	Height: 1,89
+	Position: Forward
+	Team: Juventus
+	TshirtN: 7
+	Nationality: Portuguese
+	Country: Portugal
+	City: Funchal
+}
+{
+	Name: Juventus
+	Country: Italy
+	City: Turin
+	Stadium: Allianz Stadium
+}
