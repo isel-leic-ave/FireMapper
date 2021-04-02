@@ -1,0 +1,43 @@
+
+AEROPORT:
+*ID:String
+*Name:String
+*Country:String
+*City:String
+
+AEROPLANE:
+*Plane_ID:String
+*Model: String
+*Capacity: Number
+*Check_UP: Date
+
+FLIGHTS:
+*ID: Number
+*Departure: (ID on AEROPORT)
+*Arrival: (ID on AEROPORT)
+*Company: String
+*Plane: (Plane_ID on AEROPLANE)
+
+
+Example:
+{
+ID: LIS
+Name: Humberto Delgado
+Country: Portugal
+City: Lisbon
+}
+
+{
+Plane_ID: CR-1235
+Model: Airbus A321 Long Range
+Capacity: 244
+Check_Up: 10/02/2020
+}
+
+{
+ID: TP-4521
+Departure: LIS
+Arrival: DAL
+Company: TAP
+Plane: CR-1235
+}
