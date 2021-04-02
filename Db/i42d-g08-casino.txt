@@ -1,0 +1,56 @@
+STAFF:
+*S_Id: Number
+*Name: String
+*Age: Number
+*Email: String
+*Role: String
+
+MACHINE:
+*M_Id: Number
+*Maintenance_Date: Number
+*Maintenance_Rep: (S_Id on STAFF)
+*Game: (G_Id on GAME)
+*Capacity: Number
+
+GAME:
+*G_Id: Number
+*Name: String
+*Entry_fee: Number
+
+USER:
+*U_Id: Number
+*Name: String
+*Age: Number
+*Current_Machine: (M_Id on MACHINE)
+*Balance: Number
+
+Example:
+{
+S_Id: 1001
+Name: Ambrósio Jumberto Jusué
+Age: 27
+Email: ambrosio.jj@gmail.com
+Role: Maintenance
+}
+
+{
+M_Id: 2001
+Maintenance_Date: 15-08-2019
+Maintenance_Rep: 1001
+Game: 3001
+Capacity: 1
+}
+
+{
+G_Id: 3001
+Name: Roulette
+Entry_fee: 0.50
+}
+
+{
+U_Id: 4001
+Name: Brigite Sandrina
+Age: 55
+Current_Machine: (M_Id on MACHINE)
+Balance: Number
+}
