@@ -1,0 +1,52 @@
+USER:
+*Id: Number
+*Name: String
+*Email: String
+
+MOVIE:
+*Id: Number
+*Title: String
+*ReleaseYear: Number
+
+RATING
+*Mid: Number (FK: MOVIE.Id)
+*Uid: Number (FK: User.Id)
+*Rate: Number
+
+Example:
+[
+	{
+		Id: 39171,
+		Name: Pedro Nova,
+		Email: 39171@isel.pt
+	},
+	{
+		Id: 43508,
+		Name: Diogo Cardoso,
+		Email: 43508@isel.pt
+	},
+	{
+		Id: 26349,
+		Name: Joaquim Monteiro,
+		Email: 26349@isel.pt
+	}
+]
+
+{
+	Id: 1,
+	Title: Avatar,
+	ReleaseYear: 2009
+}
+[
+	{
+		Mid: 1,
+		Uid: 39171,
+		Rate: 5
+	},
+	{
+		Mid: 1,
+		Uid: 43508,
+		Rate: 4
+	}
+]	
+	
