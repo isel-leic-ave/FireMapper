@@ -1,0 +1,28 @@
+News: 
+* Date: DateTime
+* Id: Number
+* Title: String
+* Description: String
+* PublisherBy (id on Publisher)
+
+Publisher: 
+* Id: Number
+* Name: String
+* Domain: String
+
+Example:
+{
+  Date: 2021-03-31T16:41:38,
+  Id: 1956708,
+  Title: Basquetebol: Sporting e FC Porto defrontam-se nas “meias” da Taça,
+  Description: No outro encontro de acesso à final da prova, o Benfica vai enfrentar o Imortal.
+  PublisherBy: 13245132 
+}
+
+{
+  Id: 13245132
+  Name: TVI,
+  Domain: https://www.tvi.pt/
+}
+
+© 2021 GitHub, Inc.
