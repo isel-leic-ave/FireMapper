@@ -1,0 +1,32 @@
+Movie :
+
+	Title : String
+	Year : int
+	Genre : String
+	Director : String
+	Production Companies : String
+
+Rating :
+
+	Rating : float
+	Votes : int 
+	Movie (FK) : String
+	Year (FK) : int
+
+Example{
+
+	Movie:
+	Title - The Lion King
+	Year - 1994
+	Genre - Musical Drama
+	Director(s) - Roger Allers, Rob Minkoff
+	Production Companies - Walt Disney Pictures
+
+	Rating:
+	Rating - 8,5
+	Votes - 952727
+	Movie - The Lion King
+	Year - 1994	
+
+
+}
