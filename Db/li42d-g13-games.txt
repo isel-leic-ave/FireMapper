@@ -1,0 +1,49 @@
+DEVELOPER:
+*name: String (PK)
+*mainlocation: String
+*creationyear: int
+
+GAME:
+*name: String
+*launchdate: Date
+*genre: String
+*platform: String
+*id: int (PK)
+*developer: String (FK developer.name)
+*description: String
+
+EMPLOYEE
+*developer: String (FK developer.name)
+*name:String
+*birthdate: Date
+*sex: varchar
+*country: String
+*id: int (PK)
+
+EXAMPLES-------
+
+DEVELOPER {
+    name: Kunos Simulazioni
+    mainlocation: Campagnano di Roma, Italy
+    creationyear: 2005
+}
+
+GAME {
+    name:Assetto Corsa
+    launchdate:19-12-2014
+    genre: racing,simulation
+    platform: PlayStation 4, Xbox One, Microsoft Windows
+    id:0
+    developer: Kunos Simulazioni
+    description: NEXT GENERATION RACING SIMULATOR
+}
+
+EMPLOYEE {
+    developer: Kunos Simulazioni
+    name:  Marco Massarutto
+    birthdate: 01/01/1970
+    sex: M
+    country: Italy
+    id: 1
+}
+
