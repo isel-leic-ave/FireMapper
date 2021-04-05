@@ -1,0 +1,40 @@
+Sport:
+* name: String (PK)
+* number_athletes: String
+
+Club:
+* name: String (PK)
+* country: String
+* founding_year: String
+* sport: String (FK Sport.name)
+
+Athelete:
+* id: String (PK)
+* name: String
+* birth_year: String
+* nationality: String
+* club: String (FK Club.name)
+
+Example:
+
+Sport {
+	name: Futsal
+	number_athletes: 5
+}
+
+Club {
+	name: ACCS Asnières Villeneuve 92
+	country: France
+	founding_year: 2014
+	sport (FK Sport.name): Futsal
+}
+
+Athelete {
+	id: 5
+	name: Ricardinho
+	birth_year: 1985
+	nationality: Portuguese
+	club (FK Club.name): ACCS Asnières Villeneuve 92
+}
+
+Nota: Os anos e o id são strings para facilitar a sua apresentação ao utilizador.
