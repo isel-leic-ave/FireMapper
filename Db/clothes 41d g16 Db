@@ -1,0 +1,39 @@
+Clothing:
+* Code: Number
+* Brand: String
+* Store: String
+* Price: Number
+* Size: Number
+* Materials: String
+* Production: String
+
+Store:
+* Name: String
+* Location: String
+* Category: String
+
+Brand:
+* Name: String
+* BaseLocation: String
+
+Example:
+{
+ Code: 1011011101
+ Brand: Nike
+ Store: SportZone
+ Price: 49.99
+ Size: M
+ Materials: 100% Cotton
+ Production: Vietnam
+}
+
+{
+ Name: Nike
+ Country: USA
+}
+
+{
+Name: SportZone
+Location: Lisbon
+Category: Sport
+}
