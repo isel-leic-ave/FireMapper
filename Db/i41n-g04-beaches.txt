@@ -1,0 +1,53 @@
+BEACH:
+*id: Number  [PK]
+*name: String
+*capacity: Number
+*water_sports: Array
+*watched: Boolean
+*country: String
+
+WATERSPORT:
+*id: Number  [PK]
+*name: String
+*beach: Number	[FK BEACH.id]
+
+TOURIST:
+*num_passport: Number  [PK]
+*name: String
+*birthdate: Date
+
+ACTIVITY:
+*water_sport: Number  [PK] [FK WATERSPORT.id]
+*passport_tourist: Number  [PK] [FK TOURIST.num_passport]
+*start_hour: Datetime
+*end_hour: Datetime
+
+----Example----
+
+{
+id: 1
+name: São João da Caparica
+capacity: 12000
+water_sports: [Surf, Bodyboard, Kitesurf]
+watched: true
+country: Portugal
+}
+
+{
+id: 1
+name: Surf
+beach: 1
+}
+
+{
+num_passport: 123456789
+name: Bruno Martim
+birthdate: 03/04/2000
+}
+
+{
+water_sport: 1
+passport_tourist: 123456789
+start_hour: 01/06/2015 10:00 AM
+end_hour: 01/06/2015 11:00 AM
+}
