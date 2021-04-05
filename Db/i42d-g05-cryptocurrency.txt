@@ -1,0 +1,54 @@
+Crypto:
+* Name: String
+* Price: Number
+* MarketCap: Number
+* Supply: Number
+
+Order:
+* Id: Number
+* Market: String (FK Crypto.Name)
+* Status: String
+* Side: String 
+* Size: Number
+* Fee: Number
+
+Portfolio:
+* Id: Number
+* Balance: Number
+* Deposits: Number[]
+* Withdraws: Number[]
+
+Portfolio_order:
+* Id: Number
+* Portfolio_id: Number (FK Portfolio.Id)
+* order_id: Number (FK Order.Id)
+
+Example:
+{
+name: BTC
+price: 50000
+marketcap: 948422931399
+supply: 21000000
+}
+
+{
+id: 1
+market (FK Crypto.Name): BTC
+status: Filled
+side: Buy
+size: 0.5
+fee: 0.0001
+}
+
+{
+id: 1
+portfolio_id: 1
+order_id: 1
+}
+
+}
+id: 1
+balance: 50
+deposits: [100, 70, 50]
+withdraws: [450, 50]
+{
