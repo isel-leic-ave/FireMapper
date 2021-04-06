@@ -59,7 +59,7 @@ namespace FireSource.Test
             InsertClassroomFor("TLI4DXST", "NA");
         }
         void InsertClassroomFor(string token, string teacher) {
-            DocumentReference doc = classroomsDb.Add(new Dictionary<string, object>() {
+            classroomsDb.Add(new Dictionary<string, object>() {
                 {"Teacher", teacher},
                 {"Token", token},
             });

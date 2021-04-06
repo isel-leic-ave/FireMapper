@@ -8,8 +8,8 @@ namespace FireSource
     {
         IEnumerable<Dictionary<string, object>> GetAll();
         Dictionary<string, object> GetById(object KeyValue);
-        DocumentReference Add(Dictionary<string, object> obj);
-        WriteResult Update(Dictionary<string, object> obj);
+        void Add(Dictionary<string, object> obj);
+        void Update(Dictionary<string, object> obj);
         void Delete(object KeyValue);
     }
 }
