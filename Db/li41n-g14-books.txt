@@ -1,0 +1,70 @@
+Books:
+* ISBN: String
+* Title: String
+* Year: Number
+* Edition: Number
+* Publisher (Name on Publishers)
+* Authors: Array of Authors
+* Genres: Array of Genres
+
+Authors:
+* Id: number
+* Name: String
+
+
+BookAuthor:
+* Book: (ISBN on Books)
+* Author: (Id on Authors)
+
+
+Publishers:
+* Id: number
+* Name: String
+
+
+Genres:
+* Name: String
+* Id: number
+* ParentId: (Id on Genres)
+
+
+//Book
+{
+    * ISBN: 978-0439708180
+    * Title: Harry Potter and the Sorcerer's Stone
+    * Year: Number
+    * Edition: Number
+    * Publisher (Name on Publishers)
+    * Authors: Array of Authors
+    * Genres: Array of Genres
+}
+
+//Authors
+{
+    * Id: 40561
+    * Name: J.K. Rowling
+}
+
+//BookAuthor
+{
+    * Book: 978-0439708180
+    * Author: 40561
+}
+
+//Publishers
+{
+    * Id: 2184256
+    * Name: Scholastic
+}
+
+//Genres
+{
+    * Name: Fantasy
+    * Id: 6423412
+    * ParentId: NULL
+},
+{
+    * Name: Dark Fantasy
+    * Id: 4564322
+    * ParentId: 6423412
+}
