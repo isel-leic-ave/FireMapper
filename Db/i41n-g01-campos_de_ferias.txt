@@ -1,0 +1,84 @@
+CAMPO:
+*id: Number
+*nome: String
+*endereco: String
+*localidade: String
+*codpostal: String
+*enderecoweb: String
+*coordenadas: geopoint
+
+GRUPO:
+*nome: String
+
+PESSOA:
+*id: Number
+*nome: String
+*endereco: String
+*contato: Number
+*email: String
+
+COLONO:
+*id: Number
+*nome: String
+*dtnascimento: Timestamp
+*contato: Number
+*ccidadao: Number
+*cutente: Number
+*eeducacao: Number (FK) {PESSOA.id}
+*grupo: String (FK) {GRUPO.nome}
+*campoid: Number (FK) {CAMPO.id}
+
+MONITOR:
+*id: Number (FK) {PESSOA.id}
+*campoid: Number (FK) {CAMPO.id}
+*gruponome: String (FK) {GRUPO.nome}
+
+Example:
+CAMPO{
+id: 1
+nome: "Campo A"
+endereco: "Rua A"
+localidade: "Lisboa"
+codpostal: "1000-000"
+enderecoweb: "www.a.pt"
+coordenadas: [90° N, 90° W]
+}
+
+GRUPO{
+*nome: junior
+}
+
+PESSOA{
+id: 1
+nome: Jorge Manuel
+endereco: "Rua 123"
+contato: "222223456"
+email: "jorge.manuel@xpto.com"
+}
+
+PESSOA{
+id: 2
+nome: Tiago Afonso
+endereco: "Rua 124"
+contato: "222223457"
+email: "tiago.afonso@xpto.com"
+}
+
+
+COLONO{
+id: 1
+nome: Carlos Afonso
+dtnascimento: 29/01/2010
+contato: "222223456"
+ccidadao: "12345678"
+cutente: "999999999"
+eeducacao: 1
+grupo: Junior
+campoid: 1
+}
+
+MONITOR{
+id: 2
+campoid: 1
+gruponome: Junior
+}
