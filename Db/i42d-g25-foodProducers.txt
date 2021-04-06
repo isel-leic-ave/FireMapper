@@ -1,0 +1,47 @@
+
+Producers
+*CompanyName: String	  PK
+*Founder: String
+*CEO: String
+*FoundedYear: number
+*StockValue: number
+
+Products
+*Id: serial number  	  PK
+*Company: String  	  FK(Producers.CompanyName)
+*ProductType: String
+*Price: number
+(Each product has a unique ID though various products can be of same type, 
+e.g. various companies produce same product, both Sagres and SuperBock produce beer for example)
+
+Example:
+{
+CompanyName: Sagres	  
+Founder: Antonio da sagres
+CEO: Antonio da sagres
+FoundedYear: 2000
+StockValue: 35,89
+}
+{
+CompanyName: SuperBock
+Founder: Manel Bock
+CEO: João Super
+FoundedYear: 1999
+StockValue: 27,01
+}
+------------------------------------------
+{
+Id: 1
+Company: Sagres
+ProductType: Cerveja
+Price: 9,99
+}
+{
+Id: 2
+Company: SuperBock
+ProductType: Cerveja
+Price: 10,00
+}
+
+
+
