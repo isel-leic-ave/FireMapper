@@ -1,5 +1,6 @@
 Hotels:
 	Id: number (PK)
+	Name: String
 	Localization: geopoint (FK)
 	Stars: number
 
@@ -34,13 +35,14 @@ Guest:
 //HOTELS	
 {
 	Id: 0,
-	Localization: [38.7071º N, 9.13549º W],
+	Name: Myriad by SANA,
+	Localization: [38.774799º N, 9.0938743º W],
 	Stars: 5
 }
 
 //LOCALIZATION
 {
-	Geo_Point: [38.7071º N, 9.13549º W],
+	Geo_Point: [38.774799º N, 9.0938743º W],
 	Country: Portugal,
 	City: Lisboa
 }
