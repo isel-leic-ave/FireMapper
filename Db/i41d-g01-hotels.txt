@@ -1,0 +1,90 @@
+Hotels:
+	Id: number (PK)
+	Localization: geopoint (FK)
+	Stars: number
+
+Localization:
+	Geo_Point: geopoint(PK)
+	Country: String
+	City: String
+	
+Rooms:
+	Room_Number: number (PK)
+	Floor: number
+	Pax: number		//Max capacity
+	Available: boolean
+	Hotel: number (FK)
+
+Reservations:
+	Id: number (PK)
+	Guest_Id: number (FK)
+	Check_In: timestamp
+	Check_Out: timestamp
+	Card: string
+	Rooms: number array (FK)
+	Hotel: number (FK)
+	
+Guest:
+	Id: number (PK)
+	First_Name: String
+	Last_Name: String
+	NIF: String
+	
+	
+//HOTELS	
+{
+	Id: 0,
+	Localization: [38.7071º N, 9.13549º W],
+	Stars: 5
+}
+
+//LOCALIZATION
+{
+	Geo_Point: [38.7071º N, 9.13549º W],
+	Country: Portugal,
+	City: Lisboa
+}
+	
+//ROOMS
+[
+	{
+		Room_Number: 0,
+		Floor: 1,
+		Pax: 3,
+		Available: true,
+		Hotel: 0
+	},
+	{
+		Room_Number: 1,
+		Floor: 2,
+		Pax: 1,
+		Available: false,
+		Hotel: 0
+	},
+	{
+		Room_Number: 2,
+		Floor: 2,
+		Pax: 2,
+		Available: true,
+		Hotel: 0
+	}
+]
+
+//RESERVATIONS
+{
+	Id: 0,
+	Guest_Id: 0,
+	Check_In: June 22, 2021 at 12:00:00 AM UTC+1,
+	Check_Out: June 30, 2021 at 12:00:00 AM UTC+1,
+	Card: 2879582487657915,
+	Rooms: [0,2],
+	Hotel: 0
+}
+	
+//GUEST
+{
+	Id: 0,
+	First_Name: Joaquim
+	Last_Name: Sala,
+	NIF: 672943150
+}
