@@ -1,0 +1,58 @@
+Instruments:
+
+* [Key] Name: String
+* Characteristics: String
+* Description: String
+* Category: Categories.Name
+
+
+Categories:
+
+* [Key] Name: String
+* FullName: String
+* Description: String
+
+
+Stocks:
+
+* [Key] Reference: Number
+* InstName: Instruments.Name
+* Brand: Brands.Name
+* Price: Number
+* Available: Boolean
+
+
+Brands:
+
+* [Key] Name: String
+* Country: String
+* Description: String
+
+
+Example:
+{
+	Name: Startone Acoustic Guitar CG851 1/4,
+	Characteristics: Acoustic - basswood body - nato neck - nylon strings,
+	Description: Acoustic guitar with 6 strings and clean sound,
+	Category: Chordophones
+}
+
+{
+	Name: Chordophones,
+	Full Name: Strings instruments,
+	Description: Instruments such as the piano or cello, which produce sound by vibrating strings,
+}
+
+{
+	Reference: 53351,
+	InstName: Starttone Acoustic Guitar CG851 1/4,
+	Brand: Startone,
+	Price: 33,
+	Available: true
+}
+
+{
+	Name: Startone,
+	Country: Germany,
+	Description: Startone is Thomann's own brand
+}
