@@ -41,3 +41,6 @@ dotnet test --collect:"XPlat Code Coverage"
 reportgenerator -reports:Project.Tests\TestResults\66e8839d-6844-4b8a-8067-dc9c32abed5d\coverage.cobertura.xml  -targetdir:coverage
 coverage\index.htm
 ```
+
+**NOTICE** you must first install the auxiliary dotnet tool _reportgenerator_ [docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage](
+https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows#generate-reports)

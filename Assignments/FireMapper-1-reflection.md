@@ -133,9 +133,9 @@ Cada _pull request_ deve atender aos seguintes requisitos:
   (_foreign key_) entre elas.
 * Um exemplo dos documentos.
 
-5. `DataFireMapper` deve suportar classes de domínio com propriedades de tipo
+5. `FireDataMapper` deve suportar classes de domínio com propriedades de tipo
    definido por outras classes de domínio. Neste caso deve criar uma outra
-   instância de `DataFireMapper` auxiliar para o respectivo tipo da propriedade
+   instância de `FireDataMapper` auxiliar para o respectivo tipo da propriedade
    que permite aceder à respectiva colecção. Valide o funcionamento da
    associação em testes unitários.
 
@@ -144,6 +144,8 @@ Exemplo  a classe `ClassroomInfo` correspondente ao tipo da propriedade `Classro
 ```csharp
 [FireCollection("Students")]
 public record Student( [property:FireKey] string Number, string Name, ClassroomInfo Classroom)  {}
+
+[FireCollection("Classrooms")]
 public record ClassroomInfo([property:FireKey] string Token, string Teacher) {}
 ```
 
