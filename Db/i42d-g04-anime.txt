@@ -1,0 +1,74 @@
+ANIME:
+*id: Number
+*name: String
+*seasons: Number
+*genre: String
+*year: Number
+*onGoing: Boolean
+*imdb_rate: Number
+*manga(FK MANGA.id): Number
+
+SEASON:
+*id: Number
+*number: Number
+*number_episodes: Number
+*anime_id(FK ANIME.id): Number
+
+EPISODE:
+*id: Number
+*number: Number
+*title: String
+*duration: Time
+*season_id(FK SEASON.id): Number
+
+AUTHOR:
+*id: Number
+*name: String
+*age: Number
+
+MANGA:
+*id: Number
+*name: String
+*onGoing: Boolean
+*author(FK AUTHOR.id): Number
+
+Example:
+{
+    id: 1
+    name: Attack on Titan
+    seasons: 4
+    genre: shonnen
+    year: 2013
+    onGoing: true
+    imdb_rate: 8.9
+    manga: 1
+    producer: 1
+}
+
+{
+    id: 1
+    number: 3
+    number_episodes: 22
+    anime_id: 1
+}
+
+{
+    id: 1
+    number: 17
+    title: Hero
+    duration: 00:20:00
+    season_id: 1
+}
+
+{
+    id: 1
+    name: Hajime Isayama
+    age: 34
+}
+
+{
+    id: 1
+    name: Shingeki no Kyojin
+    onGoing: true
+    author: 1
+}
