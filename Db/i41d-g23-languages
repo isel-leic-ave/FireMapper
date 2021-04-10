@@ -1,0 +1,33 @@
+Language:
+* Name: string
+* Speakers: number
+* Alphabet: string (FK: Alphabet.Name)
+
+Alphabet:
+* Name: string
+* Direction: string
+* Size: number
+
+Country:
+* Name: string
+* Languages: array (FK: Language.Name)
+* Population: number
+
+Example:
+{
+  Name: English,
+  Speakers: 750000000,
+  Alphabet: English Alphabet
+}
+
+{
+  Name: English Alphabet,
+  Direction: lr,
+  Size: 26
+}
+
+{
+  Name: United Kingdom,
+  Languages: [English],
+  Population: 67886004
+}
