@@ -1,0 +1,236 @@
+Class:
+* name: String (PK)
+* role: String
+* description: String
+* main_stat: String
+
+Skill:
+* name: String (PK)
+* class: String (FK referencia para Class.name)
+* range: int
+* type: String
+* effect: String
+* cost: String
+
+Item_Restrictions:
+* class: String (FK referencia para Class.name)
+* item: int (FK referencia para Item.id)
+PK: {class, item}
+
+Item:
+* id: int (PK)
+* name: String
+* rarity: String
+* type: String
+* description: String
+* effect: String
+* min_level: int
+
+Region:
+* name: String (PK)
+* longitude: double
+* latitude: double
+* size: float
+
+NPC:
+* id: int (PK)
+* name: String
+* job : String
+* location: String (FK referencia para Region.name)
+
+Quest:
+* name: String (PK)
+* req_level: int
+* description: String
+* rewards: String 
+* location: String (FK referencia para Region.name)
+
+Quest_requirements:
+* name: String (FK referencia para Quest.name) (PK)
+* requirement: String (FK referencia para Quest.name)
+
+Character:
+* name: String (PK)
+* birthday: Date
+* horoscope: String
+* family_name: String
+* weight: float
+* height: float
+* catchphrase: String
+* level: int
+
+Inventory:
+* char: String (FK referencia para Character.name) (PK)
+* item: int (FK referencia para Item.id)
+* quantity: int
+
+Equipment:
+* char: String (FK referencia para Character.name) (PK)
+* head: int (FK referencia para Item.id)
+* chest: int (FK referencia para Item.id)
+* boots: int (FK referencia para Item.id)
+* gloves: int (FK referencia para Item.id)
+* ring: int (FK referencia para Item.id)
+* necklace: int (FK referencia para Item.id)
+* main_hand: int (FK referencia para Item.id)
+* off_hand: int (FK referencia para Item.id)
+
+Char_stats:
+* char: String (FK referencia para Character.name) (PK)
+* hp: int
+* mana: int
+* attack_damage: int
+* armor: int
+* attack_speed: int
+* movement_speed: int
+* magic_resist: int
+* ability_power: int
+
+Enemy:
+* name: String (PK)
+* level: int
+* weakness: String
+* location: String (FK referencia para Region.name)
+
+Enemy_stats:
+* enemy: String (FK referencia para Enemy.name) (PK)
+* hp: int
+* attack_damage: int
+* armor: int
+* attack_speed: int
+* movement_speed: float
+* magic_resist: int
+* ability_power: int
+
+Drops:
+* enemy: String (FK referencia para Enemy.name) 
+* item: int (FK referencia para Item.id)
+* droprate: float
+* quantity: int
+PK {enemy, item}
+
+Example:
+
+	Class {
+		name: Looter
+		role: Support
+		description: Using a Bow and Arrow loots everything and puts it into his giant pockets and runs away
+		main_stat: movement_speed
+	}
+
+	Skill{
+		name: Looting Shot
+		class: Looter
+		range: 1500
+		type: Looting damage
+		effect: Slightly damages enemy and steals everything from him
+		cost: null
+	}
+
+	Item_Restrictions{
+		class: Looter
+		item: 21
+	}
+	
+	Item{
+		id: 21
+		name: Looting Bow
+		rarity: Legendary
+		type: ranged weapon
+		description: Epic Looting weapon only equiped by the Looting Gods and their minions
+		effect: +100 Inventory Space, +3 attack_damage, +100% attack_speed / Pierces the enemies pockets stealing everything
+		min_level: 100
+	}
+	
+	NPC{
+		id: 420
+		name: Sergium Du Vidoso
+		job: Counselour
+		location: Lazy Town
+	}
+
+	Quest{
+		name: Hunt Sergium Du Vidoso's ghosts
+		req_level: 100
+		description: Hunt all the ghosts that input doubts into Sergio Du Vidoso's head
+		rewards: 2.000.000 exp, -15% hp
+	}
+	
+	Quest_requirements{
+		name: Hunt Sergium Du Vidoso's ghosts
+		requirement: Meet Sergium Du Vidoso at the town bar with the drunk cat
+	}
+
+	Character{
+		name: Lemolas
+		birthday: 29-02-1960
+		horoscope: Piggy bank
+		family_name: Jod
+		weight: 92,25
+		height: 1,89
+		catchphrase: "By the way, let's have, a good moment"
+		level: 120
+	}
+
+	Inventory{
+		char: Lemolas
+		item: 21
+		quantity: 1
+	}
+
+	Equipment{
+		char: Lemolas
+		head: 2134
+		chest: 234
+		boots: 263
+		gloves: 1456
+		ring: 2677
+		necklace: 666
+		main_hand:  21
+		off_hand: null
+	}
+
+	Char_stats{
+		char: Lemolas
+		hp: 16.000
+		mana: null
+		attack_damage: 2
+		armor: 129
+		attack_speed: 100
+		movement_speed: 800
+		magic_resist: 98
+		ability_power: 245
+		
+	}
+	
+	Region{
+		name: Lazy Town
+		longitude: 432.43
+		latitude: -354.10
+		size: 420.29
+	}
+	
+	Enemy{
+		name: Doubt Ghost
+		level: 96
+		weakness: Magic
+		location: Lazy Town
+	}
+	
+	Enemy_stats{
+		enemy: Doubt Ghost
+		hp: 8.000
+		attack_damage: 80
+		armor: 89
+		attack_speed: 120
+		movement_speed: 600
+		magic_resist: 14
+		ability_power: 67
+	}
+
+	Drops{
+		enemy: Doubt Ghost
+		item: 3245
+		droprate: 0.7
+		quantity: 3
+	}
