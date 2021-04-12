@@ -1,0 +1,24 @@
+Beers:
+* ID: Number
+* Brand: String (FK Brands.Name)
+* Type: String
+* Alcohol: Number
+* Price: Number
+
+Brands:
+* Name: String 
+* Country: String
+
+Example:
+{
+ ID: 1
+ Brand: Super Bock
+ Type: sout
+ Alcohol: 5.1
+ Price: 3.5 
+}
+
+{
+ Name: Super Bock
+ Country: Portugal
+}
