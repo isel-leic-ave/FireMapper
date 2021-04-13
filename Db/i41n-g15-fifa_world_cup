@@ -1,0 +1,59 @@
+
+Group{
+  id: Number (PK)
+  name: String
+}
+
+Confederation{
+  confederation_code: String  (PK)
+  name: String
+}
+
+
+Nation{
+  country_code: String  (PK)
+  name: String
+  confederation_code(FK_Confederation -> confedaration_code): String
+  world_ranking: Number
+  group:(FK_Group -> id): Number
+}
+
+
+Player{
+  id: Number  (PK)
+  name: String
+  age: Number
+  nation(FK_Nation -> country_code): String
+  position: String
+}
+
+
+
+/*------------EXAMPLES---------------*/
+
+Group{
+  id: 1
+  name: Group A
+}
+
+Confederation{
+  confederation_code: UEFA
+  name: Union of European Football Associations
+}
+
+
+Nation{
+  country_code: PT
+  name: Portugal
+  confederation_code: UEFA
+  world_ranking: 5
+  group: 1
+}
+
+Player{
+  id: 24
+  name: Cristiano Ronaldo
+  age: 36
+  nation: PT
+  position: Forward
+}
