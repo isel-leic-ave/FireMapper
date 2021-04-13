@@ -1,0 +1,45 @@
+Players:
+* name: String
+* alias: String (PK)
+* age: Number
+* game: String (FK -> Games.abreviation)
+* team: String (FK -> Teams.name)
+* titlecount: Number
+
+Games:
+* abreviation: String
+* name: String
+* company: String
+* genre: String
+* rel_date: timestamp
+
+Organizations:
+* name: String
+* titlecount: Number
+
+
+
+
+Example:
+{
+	name: Nicolai Reedtz,
+	alias: device,
+	age: 25,
+	game: CS:GO,
+	team: Astralis,
+	titlecount: 36
+}
+
+{
+	abreviation: CS:GO,
+	name: Counter-Strike: Global Offensive
+	company: Valve,
+	genre: FPS,
+	rel_date: 21/08/2012
+}
+
+{
+	name: Astralis,
+	titlecount: 23
+}
+
