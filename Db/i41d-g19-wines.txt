@@ -1,0 +1,52 @@
+
+WINE:
+*ID: Number
+*Name: String
+*Type: String
+*Price: Double
+*Year: Number
+*Volume: Number
+*Alcohol_Percentage: Double
+*Ideal_Temperature: Number
+*Producer: (FK: PRODUCERS.Name)
+
+PAIRINGS:
+*ID: Number
+*Wine: (FK: WINE.ID)
+*Name: String
+
+PRODUCERS:
+*Name: String
+*Owner: String
+*Location: String
+
+Example:
+{
+ID: 1
+Name: Vinha da Valentina
+Type: Tinto
+Price: 8,95
+Year: 2020
+Volume: 750
+Alcohol_Percentage: 13.5
+Producer: Ermelinda Freitas
+Ideal_Temperature: 16
+}
+
+{
+ID: 1
+Wine: 1
+Name: Cheese
+}
+
+{
+ID: 2
+Wine: 1
+Name: Meat
+}
+
+{
+Name: Casa Ermelinda Freitas
+Owner: Leonor Freitas
+Location: Península de Setúbal
+}
