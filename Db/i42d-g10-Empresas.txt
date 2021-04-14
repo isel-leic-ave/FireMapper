@@ -1,0 +1,63 @@
+Empresas:
+	EmpresaId: number (PK)
+	DetalhesId: number (FK)
+	valorDaEmpresa: number
+	
+Detalhes:
+	DetalhesId: number (PK)
+	Nome: string
+	CEOID: number (FK)
+	PaísDaSede: String
+	AnoDeFundação: number
+	PreçoDasAções: number
+	
+CEO:
+	CEOID: number (PK)
+	Name: String
+	Idade: number
+	Nationality: String
+	
+	
+Empresas:
+{
+	EmpresaId: 1
+	DetalhesId: 1
+	valorDaEmpresa: 1000000000000$
+}
+
+Detalhes
+{
+	DetalhesId: 1
+	CEOID: 1
+	Nome: Apple
+	PaísDaSede: EUA
+	AnoDeFundação: 1976
+	PreçoDasAções: 131$
+}
+
+
+Author
+{
+	AuthorID: 1
+	Name: Tim Cook
+	Idade: 60
+	Nationality: EUA
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
