@@ -1,0 +1,67 @@
+POKEMON
+*id			Number	(PK)
+*name			String
+*generation		Number
+*primaryType		String
+*catchRate		Number
+*moves			Array	(FK MOVE.name)
+*abilities		Array	(FK ABILITY.name)
+*canEvolve		Boolean
+
+ABILITY
+*name 			String  (PK)
+*description		String
+
+TRAINER
+*id			Number  (PK)
+*name			String
+*pokemons		Array  (FK POKEMON.id)
+*items			Array  (FK ITEM.name)
+
+MOVE
+*name			String  (PK)
+*pp			Number
+*power			Number
+
+ITEM
+*name			String  (PK)
+*price			Number
+*description		String
+
+
+Examples:
+
+POKEMON {
+	id: 1,
+	name: "Pikachu",
+	generation: 1,
+	primaryType: "Electric",
+	catchRate: 190,
+	moves: ["Thunderbolt", "Quick Attack", "Dig"],
+	abilities: ["Static", "Lightning Rod"],
+	canEvolve: true
+}
+
+ABILITY {
+	name: "Static",
+	description: "Paralyzes on contact."
+}
+
+TRAINER {
+	id: 1,
+	name: "Ash",
+	pokemons: [1,2,3],
+	items: ["Potion","Pokeball"]
+}
+
+MOVE {
+	name: "Thunderbolt",
+	pp: 15,
+	power: 90
+}
+
+ITEM {
+	name: "Potion",
+	price: 200,
+	description: "Restores HP that have been lost in battle by 20 HP."
+}
