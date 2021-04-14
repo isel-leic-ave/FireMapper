@@ -1,8 +1,8 @@
 POKEMON
-*id				Number	(PK)
+*id			Number	(PK)
 *name			String
 *generation		Number
-*primaryType	String
+*primaryType		String
 *catchRate		Number
 *moves			Array	(FK MOVE.name)
 *abilities		Array	(FK ABILITY.name)
@@ -10,23 +10,23 @@ POKEMON
 
 ABILITY
 *name 			String  (PK)
-*description	String
+*description		String
 
 TRAINER
-*id				Number  (PK)
+*id			Number  (PK)
 *name			String
 *pokemons		Array  (FK POKEMON.id)
 *items			Array  (FK ITEM.name)
 
 MOVE
 *name			String  (PK)
-*pp				Number
+*pp			Number
 *power			Number
 
 ITEM
 *name			String  (PK)
 *price			Number
-*description	String
+*description		String
 
 
 Examples:
