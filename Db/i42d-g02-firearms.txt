@@ -1,0 +1,54 @@
+FIREARMS:
+*serialnum(PK): Number
+*name: String
+*magazine(FK MAGAZINE.magid): Number
+*class: String
+*firingmodes: String
+*attatchements(FK ATTATCHEMENTS.atid): Number
+
+MAGAZINE:
+*magid(PK): Number
+*type: String
+*rounds: Number
+*ammo(FK AMMUNITION.id): Number
+
+AMMUNITION:
+*ammoid(PK): Number
+*name: String
+*type: String 
+*caliber: String
+
+ATTATCHEMENTS:
+*atid: Number
+*name: String
+*type: String
+
+Example:
+{
+serialnum:123456
+name: Barrett M82
+magazine:123
+class: Anti-material precision Rifle
+firingmodes:semi-automatic
+attatchements:789
+}
+
+{
+magid:123
+type:straight
+rounds:10
+ammo:456
+}
+
+{
+ammoid:456
+name: 50 BMG
+type: High-explosive incendiary
+caliber: 12.7mm
+}
+
+{
+atid:789
+name:Leupold 4.5–14×50 Mark 4
+type: scope
+}
