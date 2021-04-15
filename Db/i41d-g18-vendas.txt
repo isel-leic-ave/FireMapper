@@ -1,21 +1,22 @@
 CLIENT: 
-* CCID: Number
+* CCID: Number (PK)
 * NoTel: Number
 * Name: String
 
 PRODUCT:
-* ID: String
+* ID: String (PK)
 * Name: String
 * Category: String
 * Price: Number
 * Brand: String (FK: BRAND.Name)
 
 BRAND:
-* Name: String
+* Name: String (PK)
 * Country: String
 * Website: String
 
 PURCHASE:
+* PID: Number (PK)
 * Client: Number (FK: CLIENT.NoTel)
 * DtPurchase: Timestamp
 * Quantity: Number
@@ -43,6 +44,7 @@ Example:
 }
 
 {
+  PID: 1,
   Client: 916378243,
   DtPurchase: 07/04/2021 1:30:00 PM,
   Quantity: 1,
