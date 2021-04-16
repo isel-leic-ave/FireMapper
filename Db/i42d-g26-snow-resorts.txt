@@ -1,0 +1,56 @@
+Resort:
+* name: String (PK)
+* country: String
+* mountain_range: String
+* location: String
+* coordinates: String
+
+Check_in:
+* arrival: String
+* departure: String
+* departure_city: String
+* number_people: number
+* transport: String
+* price: number
+* room: String
+
+Clients:
+* civil_id: String (PK)
+* name: String
+* birth_year: String
+* nationality: String
+* health_number: number
+* covid19_id: String
+* email: String
+* telephone: number
+
+Example:
+
+Resort {
+	name: Les Arcs Panorama
+	country: France
+	mountain_range: Maciço da Vanoise
+	location: Bourg-Saint-Maurice
+	coordinates: 45° 34' 18" N 6° 48' 28" E
+}
+
+Check_in {
+	arrival: 12:10 19/06/2021
+	departure: 19:55 21/062021
+	departure_city: LIS
+	number_people: 2
+	transport: TAP
+	price: 2256,00
+	room: SUITE
+}
+
+Clients {
+	civil_id: 162736789XW7
+	name: Francisco Afonso
+	birth_year: 04/06/1989
+	nationality: Portuguesa
+	health_number: 593948271
+	covid19_id: WADG2431
+	email: franfonso@hotmail.com
+	telephone: 961931236
+}
