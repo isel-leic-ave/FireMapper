@@ -1,18 +1,17 @@
 
 WINE:
-*ID: Number
+*Serial_Number: String
 *Name: String
 *Type: String
-*Price: Double
+*Price: Number
 *Year: Number
 *Volume: Number
-*Alcohol_Percentage: Double
+*Alcohol_Percentage: Number
 *Ideal_Temperature: Number
 *Producer: (FK: PRODUCERS.Name)
 
 PAIRINGS:
-*ID: Number
-*Wine: (FK: WINE.ID)
+*Wine: (FK: WINE.NR_Serie)
 *Name: String
 
 PRODUCERS:
@@ -22,7 +21,7 @@ PRODUCERS:
 
 Example:
 {
-ID: 1
+NR_Serie: 1
 Name: Vinha da Valentina
 Type: Tinto
 Price: 8,95
@@ -34,13 +33,11 @@ Ideal_Temperature: 16
 }
 
 {
-ID: 1
 Wine: 1
 Name: Cheese
 }
 
 {
-ID: 2
 Wine: 1
 Name: Meat
 }
