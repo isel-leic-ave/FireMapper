@@ -1,0 +1,95 @@
+Course:
+* Id: Number
+* Name: String
+* Type: CourseType (FK CourseType.Id)
+* Description: String
+* Price: Number
+* Instructor: Instructor (FK Instructor.Id)
+
+CourseType:
+* Id: Number
+* Type: String
+* Language: ProgrammingLanguage (FK ProgrammingLanguage.Id)
+
+ProgrammingLanguage:
+* Id: Number
+* Language: String
+
+Instructor: 
+* Id: Number
+* Name: String
+* Email: String
+
+Course collection:
+{
+    ID: c1
+    Name: Containers Orchestration with Kubernetes
+    Type: ct1
+    Description: Learn in a practical and objective way to orchestrate containers with all the power of Kubernetes
+    Price: 12.99
+	Instructor: i1
+},
+{
+    ID: c2
+    Name: JavaScript programming from basic to advanced
+    Type: ct2
+    Description: Learn all about JavaScript, ES6 +, Object Orientation, Promises, Async, Await, Axios, Webpack and more!
+    Price: 12.99
+	Instructor: i2
+},
+{
+    ID: c3
+    Name: Project Management with Agile & Scrum: The Definitive Guide
+    Type: ct3
+    Description: Learn in practice and permanently to manage projects based on Agile & Scrum methods!
+    Price: 22.99
+	Instructor: i3
+}
+
+CourseType collection:
+{
+	Id: ct1
+	Type: Developer Tools
+	ProgrammingLanguage: l1
+},
+{
+	Id: ct2
+	Type: Software & IT
+	ProgrammingLanguage: l2
+},
+{
+	Id: ct3
+	Type: Business
+	ProgrammingLanguage: l3
+}
+
+ProgrammingLanguage collection:
+{
+	Id: l1
+	Language: C
+},
+{
+	Id: l2
+	Language: JavaScript
+}
+{
+	Id: l3
+	Language: Python
+}
+
+Instructor collection:
+{
+    ID: i1
+    Name: Geek University
+    Email: geekuniversity@email.com
+},
+{
+    ID: i2
+    Name: Jonh Sanchez
+    Email: jonhsanchez@email.com
+},
+{
+    ID: i3
+    Name: Maria Ana
+    Email: mariaana@email.com
+}
