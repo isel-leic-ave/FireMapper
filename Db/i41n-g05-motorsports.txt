@@ -1,0 +1,74 @@
+DRIVER
+*number			Number		(PK)
+*age			Number
+*name			String
+*wins			Number
+*poles			Number
+*wdc_titles		Number
+
+CAR
+*chassis		String		(PK)
+*power			Number
+*displacement		Number
+*drivetrain		String
+*aspiration		String
+*driver			Number		(FK DRIVER.number)
+
+MANUFACTURER
+*name			String		(PK)
+*number_of_cars		Number
+*cars			Array		(FK CAR.chassis)
+
+CATEGORY
+*abbreviation		String		(PK)
+*full_name		String
+*manufacturers		Array		(FK MANUFACTURER.name)
+*rules			Array
+
+
+CHAMPIONSHIP
+*abbreviation		String		(PK)
+*full_name		String
+*category		Array		(FK CAREGORY.abbreviation)
+
+Examples: 
+
+CHAMPIONSHIP {
+	abbreviation : "WEC",
+	full_name : "World Endurance Championship",
+	category : ["Endurance Racing"]
+}
+
+CATEGORY {
+	abbreviation : "ER",
+	full_name : "Endurance Racing",
+	manufacturers : ["Toyota", "Audi", "Porsche"],
+	rules : ["4 wheels", "Gasoline", "Hybrid", "Closed Cockpit"]
+}
+
+MANUFACTURER {
+	name : "Toyota",
+	number_of_cars : 2,
+	cars : ["Toyota GR010 Hybrid-1", "Toyota GR010 Hybrid-2"]
+}
+
+CAR {
+	chassis : "Toyota GR010 Hybrid",
+	power : 938,
+	displacement : 3500,
+	drivetrain : "4WD",
+	aspiration : "Turbo Hybrid",
+	driver : "8"
+}
+
+DRIVER {
+	number : 8,
+	age : 32,
+	name : "Sébastien Buemi",
+	wins : 17,
+	poles : 7,
+	wdc_titles : 2
+}
+
+
+
