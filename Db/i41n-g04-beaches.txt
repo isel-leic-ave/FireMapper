@@ -2,52 +2,39 @@ BEACH:
 *id: Number  [PK]
 *name: String
 *capacity: Number
-*water_sports: Array
+*mainSport: Array
 *watched: Boolean
-*country: String
+*local: Number [FK BEACH.id]
 
-WATERSPORT:
+LOCATION:
 *id: Number  [PK]
-*name: String
-*beach: Number	[FK BEACH.id]
+*city: String
+*country: String	[FK COUNTRY.name]
 
-TOURIST:
-*num_passport: Number  [PK]
-*name: String
-*birthdate: Date
-
-ACTIVITY:
-*water_sport: Number  [PK] [FK WATERSPORT.id]
-*passport_tourist: Number  [PK] [FK TOURIST.num_passport]
-*start_hour: Datetime
-*end_hour: Datetime
+COUNTRY:
+*name: String  [PK]
+*continent: String
+*population: Number
 
 ----Example----
 
 {
-id: 1
-name: São João da Caparica
-capacity: 12000
-water_sports: [Surf, Bodyboard, Kitesurf]
-watched: true
-country: Portugal
+         { "Id", 3 },
+         { "Name", "Praia de Albufeira" },
+         { "Capacity", 6000 },
+         { "MainSport", "Bodyboard" },
+         { "Watched", true },
+         { "Location", 1 },
 }
 
 {
-id: 1
-name: Surf
-beach: 1
+         { "Id", 1 },
+         { "City", "Lagos" },
+         { "Country", "Portugal" }
 }
 
 {
-num_passport: 123456789
-name: Bruno Martim
-birthdate: 03/04/2000
-}
-
-{
-water_sport: 1
-passport_tourist: 123456789
-start_hour: 01/06/2015 10:00 AM
-end_hour: 01/06/2015 11:00 AM
+         { "Name", "Portugal },
+         { "Continent", "Europa" },
+         { "Population", 10000000 }
 }
