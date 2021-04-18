@@ -34,12 +34,7 @@ Ideal_Temperature: 16
 
 {
 Wine: 1
-Name: Cheese
-}
-
-{
-Wine: 1
-Name: Meat
+Name: Cheese, Meat
 }
 
 {
