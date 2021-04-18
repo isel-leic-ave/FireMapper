@@ -1,0 +1,31 @@
+Lawyer
+*id					Number	(PK)
+*name				String
+*ProcessNumber		FK Process.Number)
+*RemoteWork			bool
+*YearsActive		Number
+
+Process
+*Number 			String  (PK)
+*Description		String
+*IsPrescribed		bool
+*Client				String
+
+
+
+Examples:
+
+Lawyer {
+	id: 1,
+	name: "Zé Miguel",
+	ProcessNumber: 1,
+	RemoteWork: true,
+	YearsActive: 10
+}
+
+Process {
+	number: "12-a",
+	description: "Grand Theft Auto.",
+	IsPrescribed: false,
+	Client: "Manel Silva"
+}
