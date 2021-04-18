@@ -9,7 +9,7 @@ Process
 *Number 		String  (PK)
 *Description		String
 *IsPrescribed		bool
-*Client			String
+*Client			Client
 
 
 
@@ -28,4 +28,4 @@ Process {
 	description: "Grand Theft Auto.",
 	IsPrescribed: false,
 	Client: "Manel Silva"
-}
+}	
