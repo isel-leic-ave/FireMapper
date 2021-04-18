@@ -1,0 +1,23 @@
+Fighter:
+  Name: String
+  Age: Number
+  Height: Number
+  Nationality: String
+  Division: String [FK WeightDivision.name]
+
+WeightDivision:
+  Name: String
+  Limit: Number
+
+Exemplo:
+{
+  Name: Jon Jones
+  Age: 33
+  Height: 1.93
+  Nationality: American
+  Division: Light HeavyWeight
+}
+{
+  Name: Light HeavyWeight
+  Limit: 205
+}
