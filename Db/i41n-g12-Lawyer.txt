@@ -9,7 +9,12 @@ Process
 *Number 		String  (PK)
 *Description		String
 *IsPrescribed		bool
-*Client			Client
+*Client	
+
+Client
+*Number 		String  (PK)
+*Name			String
+*Process		Process
 
 
 
@@ -29,3 +34,8 @@ Process {
 	IsPrescribed: false,
 	Client: "Manel Silva"
 }	
+Client{
+	number: "10",
+	name:"Test Name",
+	Process process
+}
