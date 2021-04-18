@@ -6,13 +6,13 @@ Lawyer
 *YearsActive		Number
 
 Process
-*Number 		String  (PK)
+*ProcessNumber 		String  (PK)
 *Description		String
 *IsPrescribed		bool
-*Client	
+*Client	                string
 
 Client
-*Number 		String  (PK)
+*clientId 		String  (PK)
 *Name			String
 *Process		Process
 
@@ -29,13 +29,13 @@ Lawyer {
 }
 
 Process {
-	number: "12-a",
+	ProcessNumber: "12-a",
 	description: "Grand Theft Auto.",
 	IsPrescribed: false,
 	Client: "Manel Silva"
 }	
 Client{
-	number: "10",
+	ClientId: "10",
 	name:"Test Name",
 	Process process
 }
