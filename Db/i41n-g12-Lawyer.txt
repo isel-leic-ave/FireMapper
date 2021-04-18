@@ -1,15 +1,15 @@
 Lawyer
-*id					Number	(PK)
-*name				String
+*id			Number	(PK)
+*name			String
 *ProcessNumber		FK Process.Number)
-*RemoteWork			bool
+*RemoteWork		bool
 *YearsActive		Number
 
 Process
-*Number 			String  (PK)
+*Number 		String  (PK)
 *Description		String
 *IsPrescribed		bool
-*Client				String
+*Client			String
 
 
 
@@ -17,8 +17,8 @@ Examples:
 
 Lawyer {
 	id: 1,
-	name: "Zé Miguel",
-	ProcessNumber: 1,
+	name: "Ze Miguel",
+	ProcessNumber: 12-a,
 	RemoteWork: true,
 	YearsActive: 10
 }
