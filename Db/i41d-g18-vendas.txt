@@ -4,7 +4,7 @@ CLIENT:
 * Name: String
 
 PRODUCT:
-* ID: Number
+* ID: String
 * Name: String
 * Category: String
 * Price: Number
@@ -17,7 +17,7 @@ BRAND:
 
 PURCHASE:
 * Client: Number (FK: CLIENT.NoTel)
-* DtPurchaseUnix: Timestamp
+* DtPurchase: Timestamp
 * Quantity: Number
 * Product: String (FK: PRODUCT.ID)
 
@@ -44,7 +44,7 @@ Example:
 
 {
   Client: 916378243,
-  DtPurchase: 1617218956,
+  DtPurchase: 07/04/2021 1:30:00 PM,
   Quantity: 1,
   Product: 000006617283
 }

@@ -9,12 +9,15 @@
 
 ***
 
-Assignments:
+## Assignments
+
 1. Published 28-3-2021, DEADLINE: 18-4-2021, [FireMapper-1-reflection](Assignments/FireMapper-1-reflection.md)
 2. TBD
 3. TBD
 
 ***
+
+## FireMapper overview
 
 High level view of projects (in `<<...>>`) and core types:
 
@@ -22,20 +25,24 @@ High level view of projects (in `<<...>>`) and core types:
 
 ***
 
+## Slides Q&A session about FireMapper
+
 <a target="_blank" href="Assets/FireMapper.pdf">
     <img width="500" src="Assets/FireMapper.gif">
 </a>
 
 ***
 
-Run tests with `dotnet test --logger "console;verbosity=detailed"` to see `Console` output.
+## Unit tests and Coverage
 
-List tests with `dotnet test -t`
+Some tips:
+* Run tests with `dotnet test --logger "console;verbosity=detailed"` to see `Console` output.
+* List tests with `dotnet test -t`
+* Select tests to run with `dotnet test --filter NameOfTheClassTest`
 
-Select tests to run with `dotnet test --filter NameOfTheClassTest`
 
-
-Run coverage with:
+Run coverage with auxiliary [coverage.bat](coverage.bat) in root folder, which
+performs the following tasks, for example:
 ```
 dotnet test --collect:"XPlat Code Coverage"
 reportgenerator -reports:Project.Tests\TestResults\66e8839d-6844-4b8a-8067-dc9c32abed5d\coverage.cobertura.xml  -targetdir:coverage
