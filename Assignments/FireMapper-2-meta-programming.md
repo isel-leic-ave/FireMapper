@@ -35,7 +35,11 @@ Implemente `DynamicFireMapper` que gera dinamicamente implementações da
 interface definida na Etapa 0, para cada propriedade de cada classe de
 domínio acedida pelo Logger.
 
-Implemente testes unitários que validem o correcto funcionamento de `DynamicFireMapper`.
+Implemente testes unitários que validem o correcto funcionamento de
+`DynamicFireMapper`.
+
+**Requisito**: Deve incluir nos testes unitários a utilização de entidades de
+domínio de tipo valor (i.e. definidas como `struct`).
 
 ***
 ### Abordagem de desenvolvimento
