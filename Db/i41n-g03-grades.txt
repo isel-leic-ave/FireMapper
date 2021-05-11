@@ -1,0 +1,186 @@
+Student:
+* IdStudent:	Number (PK)
+* Name: 		String
+* Email: 		String
+
+Teacher:
+* IdTeacher: 	Number (PK)
+* Name: 		String
+* Email: 		String
+
+Subject:
+* Abreviation: 		String (PK)
+* Description:	 	String
+
+SchoolClass:
+* IdClass:		Number (PK)
+* Abreviation:	String
+* Description:	String
+
+CurricularUnit:
+* IdCU: 			Number (PK)
+* Year:			Number 
+* Semester:		Number 
+* Abreviation:	String (FK:Abreviation in Subject)
+
+CUClass:
+* IdCUClass:		Number (PK)
+* IdClass:		Number (FK:IdClass in SchoolClass)
+* IdCU:			Number (FK:IdCU in CurricularUnit)
+* IdTeacher:		Number (FK:IdTeacher in Teacher)
+
+StudentClass:
+* IdStudentClass:	Number (PK)
+* IdClass:			Number (FK:IdClass in SchoolClass)
+* IdStudent:		Number (FK:IdStudent in Student)
+
+Grade:
+* IdGrade:			Number (PK)
+* IdStudentClass:	Number (FK:IdStudentClass in StudentClass)
+* CUClass:			Number (FK:IdCUClass in CUClass)
+* FinalGrade:		Number
+
+
+
+Example:
+Student:
+{
+  IdStudent: 99999
+  Name: Agapito Boavida
+  Email: a99999@alunos.isel.pt
+}
+{
+  IdStudent: 55555
+  Name: Ermenegildo Bitola
+  Email: a55555@alunos.isel.pt
+}
+{
+  IdStudent: 12345
+  Name: John Doe
+  Email: a12345@alunos.isel.pt
+}
+
+Teacher:
+{
+  IdTeacher: 1
+  Name: Leonardo da Vinci
+  Email: leonardo.vinci@isel.pt
+}
+{
+  IdTeacher: 2
+  Name: Albert Einstein
+  Email: albert.einstein@isel.pt
+}
+{
+  IdTeacher: 3
+  Name: Steve Wozniak
+  Email: steve.wozniak@isel.pt
+}
+
+Subject:
+{
+  Abreviation: AVE
+  Description: Ambientes Virtuais de Execucao
+}
+{
+  Abreviation: CSM
+  Description: Codificacao de Sinais Multimedia
+}
+{
+  Abreviation: AED
+  Description: Algoritmos e Estruturas de Dados
+}
+
+SchoolClass:
+{
+  IdClass: 1
+  Abreviation: LI4N
+  Description: Turma 4 - Licenciatura Informatica, Noite
+}
+{
+  IdClass: 2
+  Abreviation: LI4D
+  Description: Turma 4 - Licenciatura Informatica, Dia
+}
+{
+  IdClass: 3
+  Abreviation: LC1N
+  Description: Turma 1 - Licenciatura Comunicacoes, Noite
+}
+
+CurricularUnit:
+{
+  IdCU: 1
+  Year: 2
+  Semester: 2
+  Abreviation: AVE
+}
+{
+  IdCU: 2
+  Year: 2
+  Semester: 2
+  Abreviation: CSM
+}
+{
+  IdCU: 3
+  Year: 2
+  Semester: 1
+  Abreviation: AED
+}
+
+CUClass:
+{
+  IdCUClass: 1
+  IdClass: 1
+  IdCU: 1
+  IdTeacher: 3
+}
+{
+  IdCUClass: 2
+  IdClass: 1
+  IdCU: 2
+  IdTeacher: 1
+}
+{
+  IdCUClass: 3
+  IdClass: 3
+  IdCU: 1
+  IdTeacher: 2
+}
+
+StudentClass:
+{
+  IdStudentClass: 1
+  IdClass: 1
+  IdStudent: 12345
+}
+{
+  IdStudentClass: 2
+  IdClass: 1
+  IdStudent: 55555
+}
+{
+  IdStudentClass: 3
+  IdClass: 2
+  IdStudent: 99999
+}
+
+Grade:
+{
+  IdGrade: 1
+  IdStudentClass: 1
+  CUClass:	1
+  FinalGrade: 17.0
+}
+{
+  IdGrade: 2
+  IdStudentClass: 1
+  CUClass:	2
+  FinalGrade: 14.0
+}
+{
+  IdGrade: 3
+  IdStudentClass: 2
+  CUClass:	1
+  FinalGrade: 15.0
+}
