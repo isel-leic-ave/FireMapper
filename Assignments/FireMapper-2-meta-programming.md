@@ -33,7 +33,7 @@ outra classe de domínio).
 
 Implemente `DynamicFireMapper` que gera dinamicamente implementações da
 interface definida na Etapa 0, para cada propriedade de cada classe de
-domínio acedida pelo Logger.
+domínio acedida.
 
 Implemente testes unitários que validem o correcto funcionamento de
 `DynamicFireMapper`.
