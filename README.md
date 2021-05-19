@@ -12,7 +12,7 @@
 ## Assignments
 
 1. Published 28-3-2021, DEADLINE: 18-4-2021, [FireMapper-1-reflection](Assignments/FireMapper-1-reflection.md)
-2. Published 03-5-2021, DEADLINE: 23-5-2021, [FireMapper-2-meta-programming](Assignments/FireMapper-2-meta-programming.md)
+2. Published 03-5-2021, DEADLINE: ~~23-5-2021~~ **30-5-2021**, [FireMapper-2-meta-programming](Assignments/FireMapper-2-meta-programming.md)
 3. TBD
 
 ***

@@ -1,7 +1,10 @@
 namespace FireSource.Test
 {
-    public record Student(string Number, string Name, string Classroom) 
+    public record Student(string Name, string Classroom) 
     {
+
+        public string Number {get; set; }
+
         public Student() :this(null, null, null) {}
         public static Student Parse(string input)
         {
