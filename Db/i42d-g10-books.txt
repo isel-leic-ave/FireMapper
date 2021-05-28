@@ -1,0 +1,71 @@
+Book:
+	BookID: number (PK)
+	TitleID: number (FK)
+	price: number
+	
+Title:
+	TitleID: number (PK)
+	GenreID: number (FK)
+	AuthorID: number (FK)
+	TitleName: String
+	yearOfRelease: number
+ 
+
+Genres:
+	GenreID: number (PK)
+	GenreName: String
+	
+Author:
+	AuthorID: number (PK)
+	Name: String
+	Nationality: String
+	
+	
+Book:
+{
+	BookID: 1
+	TitleID: 1
+	Price: 10$
+}
+
+Title
+{
+	TitleID: 1
+	GenreID: 1
+	AuthorID: 1
+	TitleName: As rosas
+	yearOfRelease: 2021
+}
+
+Genres:
+{
+	genreID: 1
+	GenreName: ação
+}
+
+
+
+Author
+{
+	AuthorID: 1
+	Name: pedro
+	Nationality: portugues
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
